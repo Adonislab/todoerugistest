@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
-import { Redirect } from "react-router-dom"; // Importez Redirect
 import { getLoginURL } from '../utils/api';
 import "../styles/Login.css";
 import { ToastContainer, toast } from 'react-toastify';
@@ -20,7 +19,6 @@ export default function Login() {
     };
 
     const [isLoading, setIsLoading] = useState(false);
-    const [redirectToHome, setRedirectToHome] = useState(false); // State pour gérer la redirection
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -37,8 +35,6 @@ export default function Login() {
             toast.success("Connexion réussie !");
             localStorage.setItem("accessToken", response.data.tokens.access);
             localStorage.setItem("refreshToken", response.data.tokens.refresh);
-            // Définissez redirectToHome à true pour activer la redirection
-            setRedirectToHome(true);
         } catch (error) {
             console.log("Error during Login!", error.response?.data);
             if (error.response && error.response.data) {
@@ -53,11 +49,6 @@ export default function Login() {
             setIsLoading(false);
         }
     };
-
-    // Si redirectToHome est true, redirigez l'utilisateur vers la page d'accueil
-    if (redirectToHome) {
-        return <Redirect to="/" />;
-    }
 
     return (
         <div className="form-container">
