@@ -1,6 +1,6 @@
 // api.js
 
-const baseURL = "http://127.0.0.1:8000/api";
+const baseURL = "https://backenderugis.onrender.com/api";
 
 export const getBaseURL = () => {
   return baseURL;
