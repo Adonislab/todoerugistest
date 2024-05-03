@@ -33,3 +33,7 @@ export const getLoginURL = () => {
 export const getRegisterURL = () => {
     return `${baseURL}/register/`;
 };
+
+
+
+

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
+import { getTaskURL } from '../utils/api';
 import 'react-toastify/dist/ReactToastify.css';
 import { getTasksURL } from "../utils/api"; 
 import axios from "axios";
@@ -50,7 +51,7 @@ export default function Tache() {
         description: taskDescription,
      
       };
-      const response = await axios.post("http://127.0.0.1:8000/api/tasks/", newTask, config);
+      const response = await axios.post(getTaskURL() , newTask, config);
       console.log("Task added successfully:", response.data);
       // Réinitialiser les champs de formulaire après l'ajout de la tâche
       setTaskTitle("");
