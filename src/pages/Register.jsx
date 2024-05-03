@@ -33,9 +33,7 @@ export default function Register() {
             const response = await axios.post(getRegisterURL(), formData);
             console.log("Success!", response.data);
             toast.success("Inscription réussie !");
-			setTimeout(() => {
-              window.location.href = "/login";
-            }, 2000);
+			
         } catch (error) {
             console.log("Error during registration!", error.response?.data);
             if (error.response && error.response.data) {

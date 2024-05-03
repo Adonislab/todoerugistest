@@ -35,6 +35,9 @@ export default function Login() {
             toast.success("Connexion réussie !");
             localStorage.setItem("accessToken", response.data.tokens.access);
             localStorage.setItem("refreshToken", response.data.tokens.refresh);
+            setTimeout(() => {
+                window.location.href = "/task";
+              }, 2000);
         } catch (error) {
             console.log("Error during Login!", error.response?.data);
             if (error.response && error.response.data) {
