@@ -1,11 +1,13 @@
 import { useState } from "react";
 import axios from "axios";
+import { useHistory } from "react-router-dom"; // Importez useHistory
 import { getLoginURL } from '../utils/api';
 import "../styles/Login.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function Login() {
+    const history = useHistory(); // Initialisez useHistory
     const [formData, setFormData] = useState({
         email: "",
         password: ""
@@ -35,9 +37,8 @@ export default function Login() {
             toast.success("Connexion réussie !");
             localStorage.setItem("accessToken", response.data.tokens.access);
             localStorage.setItem("refreshToken", response.data.tokens.refresh);
-            setTimeout(() => {
-              window.location.href = "/";
-            }, 2000);
+            // Utilisez history.push pour rediriger vers une nouvelle route
+            history.push("/");
         } catch (error) {
             console.log("Error during Login!", error.response?.data);
             if (error.response && error.response.data) {
