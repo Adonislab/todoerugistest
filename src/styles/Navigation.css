@@ -1,0 +1,65 @@
+/* Navigation.css */
+
+/* Style de base pour la navigation */
+nav {
+    background-color: #4caf50;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style des éléments de la liste */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+    margin-left: auto; /* Cette règle positionne l'élément à l'extrême droite */
+}
+
+/* Style des liens */
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Style de la liste déroulante */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ffcc00;
+    color: #333;
+}
+
+/* Style pour afficher la liste déroulante */
+.dropdown:hover .dropdown-content {
+    display: block;
+}

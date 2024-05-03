@@ -1,0 +1,21 @@
+/* Mise en place de mon body */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: aquamarine;
+  font-size: 20px; 
+}
+
+/* Vous pouvez également appliquer une taille de police spécifique à certains éléments si nécessaire */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 2em; /* Taille de police pour les titres */
+}
+
+p {
+  font-size: 1.5em; /* Taille de police pour les paragraphes */
+}
+
+/* Augmenter l'espacement intérieur des éléments si nécessaire */
+.container {
+  padding: 20px;
+}

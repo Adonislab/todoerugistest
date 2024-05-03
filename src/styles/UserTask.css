@@ -1,0 +1,137 @@
+/* UserTask.css */
+
+.user-task-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #007bff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-task-image {
+    width: 100px; 
+    height: 100px;
+    object-fit: cover; 
+    border-radius: 50%; 
+    margin-bottom: 10px;
+}
+
+.user-task-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.user-task-description {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.user-task-username {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.user-task-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.user-task-button {
+    padding: 8px 16px;
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-task-button:hover {
+    background-color: #0056b3;
+}
+
+/* Style pour le modal */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: green; 
+    background-color: #ccc; 
+    border: 1px solid #666; 
+    border-radius: 50%; 
+    padding: 5px; 
+}
+
+/* Style pour les inputs */
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Style pour les labels */
+.modal-content label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Style pour les boutons */
+.modal-content button {
+    padding: 10px 20px;
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #0056b3;
+}
+
+.Checkbox {
+    display: flex;
+    flex-direction: row;
+}
+
+.checkbox-label {
+    margin-bottom: 10px;
+}
+
+.checkbox-label input {
+    margin-right: 5px;
+}
